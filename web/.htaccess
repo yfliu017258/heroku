@@ -1,8 +1,26 @@
+# Powered by Zyro.com
+
+AddType application/x-httpd-php .gif
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault A0
+	ExpiresByType image/gif A691200
+	ExpiresByType image/png A691200
+	ExpiresByType image/jpeg A691200
+	ExpiresByType text/css A691200
+	ExpiresByType text/javascript A691200
+	ExpiresByType application/javascript A691200
+</IfModule>
+
+ErrorDocument 401 "Unauthorized"
+ErrorDocument 403 "Forbidden"
 RewriteEngine On
 RewriteBase /
-
 #### PERSISTENT CONTENT ####
-RewriteCond %{REQUEST_URI} \/(?:store\.log|ga_code|store\.dat|data\.json)$ [OR]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^.*$ index.php [L,QSA]
+DirectoryIndex index.php index.cgi index.html
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_URI} ^\/(js\/main\.js|css\/(\d+|common|site)\.css)$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ web/$1 [L,QSA]
 
