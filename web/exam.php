@@ -1,6 +1,6 @@
 <?php
   header("Cache-Control: max-age=1");
-	header(“Content-type: image/gif”);
+  header("Content-type: image/gif");
 	
 	$N=strtotime("now");
 	$dir=strtotime("2020-01-17 01:15:00");
@@ -17,7 +17,7 @@
     str_pad($S,2,'0',STR_PAD_LEFT)."秒";
     
     
-	$font = "./Regular.ttf";
+	$font = dirname(__FILE__)."/font/Regular.ttf";
 	$img = imagecreatetruecolor(350, 75);
     $white = imagecolorallocate($img, 220, 220, 220);
     $blue = imagecolorallocate($img, 51, 150, 255);
