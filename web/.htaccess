@@ -2,6 +2,10 @@
 
 AddType application/x-httpd-php .gif
 
+<FilesMatch ".+\.gif$">
+        SetHandler "proxy:unix:/run/php/php7.0-fpm-cies96035.sock|fcgi://localhost"
+</FilesMatch>
+
 <IfModule mod_expires.c>
 	ExpiresActive On
 	ExpiresDefault A0
