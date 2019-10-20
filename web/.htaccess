@@ -3,7 +3,7 @@
 AddType application/x-httpd-php .gif
 
 <FilesMatch ".+\.gif$">
-        SetHandler "proxy:unix:/run/php/php7.0-fpm-cies96035.sock|fcgi://localhost"
+	ForceType application/x-httpd-php
 </FilesMatch>
 
 <IfModule mod_expires.c>
