@@ -4,6 +4,7 @@ AddType application/x-httpd-php .png
 #	SetHandler "proxy:unix:/run/php/php7.0-fpm-cies96035.sock|fcgi://localhost"
 #</FilesMatch>
 
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
