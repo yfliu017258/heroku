@@ -1,6 +1,6 @@
 <?php
   header("Cache-Control: max-age=1");
-  header("Content-type: image/gif");
+  header("Content-type: image/png");
 	
 	$N=strtotime("now");
 	$dir=strtotime("2020-01-17 01:15:00");
