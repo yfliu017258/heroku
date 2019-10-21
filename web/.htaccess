@@ -1,7 +1,6 @@
-#AddType application/x-httpd-php .png
+AddType application/x-httpd-php .png
 
 <FilesMatch "\.png$">
-	AddType application/x-httpd-php
 	SetHandler application/x-httpd-php
 #	SetHandler "proxy:unix:/run/php/php7.0-fpm-cies96035.sock|fcgi://localhost"
 </FilesMatch>
