@@ -26,7 +26,6 @@
     imagefill($img, 0, 0, $white);
     imagettftext($img, 20, 0, 5, 25, $blue2, $font, "距109學測還剩:");
     imagettftext($img, 30, 0, 5, 65, $blue, $font, $str);
-    //size,,x,y
 	imagepng($img);
 	imagedestroy($img);
 ?>'
