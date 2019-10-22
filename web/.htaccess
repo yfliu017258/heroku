@@ -1,4 +1,4 @@
-AddType application/x-httpd-php .png
+#AddType application/x-httpd-php .png
 
 #<FilesMatch "\.png$">
 #	SetHandler application/x-httpd-php
