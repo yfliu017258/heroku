@@ -1,9 +1,9 @@
 AddType application/x-httpd-php .png
 
-#<FilesMatch "\.png$">
-#	SetHandler application/x-httpd-php
+<FilesMatch "\.png$">
+	SetHandler application/x-httpd-php
 #	SetHandler "proxy:unix:/run/php/php7.0-fpm-cies96035.sock|fcgi://localhost"
-#</FilesMatch>
+</FilesMatch>
 
 
 RewriteEngine On
