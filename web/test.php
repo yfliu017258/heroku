@@ -22,9 +22,9 @@ echo <<<SVG
 	<circle id="panel" cx="{$panelX}" cy="{$panelY}" r="{$R}" fill="none" stroke="#000000" stroke-width="10"/>
 	<circle id="point" cx="{$panelX}" cy="{$panelY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
 	
-	<polyline id="second"  points="{$panelX},{$panelY} {$panelX},{$panelY}+{$SL}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-	<polyline id="minute"  points="{$panelX},{$panelY} {$panelX},{$panelY}+{$ML}" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round"/>
-	<polyline id="hour"  points="{$panelX},{$panelY} {$panelX},{$panelY}+{$HL}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round"/>
+	<polyline id="second"  points="{$panelX},{$panelY} {$panelX},{{$panelY}+{$SL}}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+	<polyline id="minute"  points="{$panelX},{$panelY} {$panelX},{{$panelY}+{$ML}}" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round"/>
+	<polyline id="hour"  points="{$panelX},{$panelY} {$panelX},{{$panelY}+{$HL}}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round"/>
 </svg>
 SVG;
 ?> 
