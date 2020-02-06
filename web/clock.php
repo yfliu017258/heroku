@@ -24,15 +24,6 @@ $HY=sin(deg2rad($H*30-90))*$R*0.5+$PY;
 $MY=sin(deg2rad($M*6-90))*$R*0.7+$PY;
 $SY=sin(deg2rad($S*6-90))*$R*0.85+$PY;
 
-<defs>
-  <radialGradient id="r1" cx=".3" cy=".3" r=".7">
-    <stop offset="0%" stop-color="#fff"></stop>
-    <stop offset="30%" stop-color="#9f9"></stop>
-    <stop offset="70%" stop-color="#373"></stop>
-    <stop offset="100%" stop-color="#000"></stop>
-  </linearGradient>
-</defs>
-
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
@@ -50,13 +41,13 @@ echo <<<SVG
 	
 	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#BBFFEE" stroke-width="10"/>
 	
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#666666" stroke="#884444" stroke-width="20" stroke-linecap="round">
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#884444" stroke="#884444" stroke-width="20" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#333333" stroke="#882222" stroke-width="7" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#882222" stroke="#882222" stroke-width="7" stroke-linecap="round">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#000000" stroke="#888800" stroke-width="2" stroke-linecap="round"> 
+	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#888800" stroke="#888800" stroke-width="2" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
