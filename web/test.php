@@ -25,7 +25,7 @@ echo <<<SVG
 	/*<line id="second"  points="{$panelX},{$panelY} {$panelX},{$panelY+$SL}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$panelX},{$panelY}" to="360,{$panelX},{$panelY}"/>
 	</line>*/
-	<line id="minute"  x1="{$panelX}" y1="{$panelY}" x2="{$panelX}",y2="{$panelY+$ML}" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
+	<line id="minute"  x1="{$panelX}" y1="{$panelY}" x2="{$panelX}",y2="100" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$panelX},{$panelY}" to="360,{$panelX},{$panelY}"/>
 	</line>
 	/*<line id="hour"  points="{$panelX},{$panelY} {$panelX},{$panelY+$HL}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round">
