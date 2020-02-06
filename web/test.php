@@ -24,16 +24,6 @@ $HY=sin(deg2rad($H*30-90))*$R*0.5+$PY;
 $MY=sin(deg2rad($M*6-90))*$R*0.7+$PY;
 $SY=sin(deg2rad($S*6-90))*$R*0.85+$PY;
 
-<defs>
-  <radialGradient id="r1" cx=".3" cy=".3" r=".7">
-    <stop offset="0%" stop-color="#fff"></stop>
-    <stop offset="30%" stop-color="#9f9"></stop>
-    <stop offset="70%" stop-color="#373"></stop>
-    <stop offset="100%" stop-color="#000"></stop>
-  </linearGradient>
-</defs>
-
-
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
