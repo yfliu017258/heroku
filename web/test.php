@@ -2,6 +2,9 @@
 header( 'Content-type: image/svg+xml' );
 
 
+$N=strtotime("now");
+$dir=strtotime("2020-02-06 16:00:00");
+$ds=$dir-$N;
 $R = 290;
 $SL = 250;
 $ML = 200;
@@ -10,7 +13,6 @@ $bgdX = 600;
 $bgdY = 600;
 $PX = 300;
 $PY = 300;
-$ST = "font-size:48px;"
 
 
 echo <<<SVG
@@ -34,10 +36,10 @@ echo <<<SVG
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
 	
-	<text x="440,542,580,542,440,300,160,56,20" y="56,160,300,440,542,580,542,440,300" style="{$ST}">123456789</text>  
-	<text x="56" y="160" style="{$ST}">10</text>  
-	<text x="160" y="56" style="{$ST}">11</text>  
-	<text x="300" y="20" style="{$ST}">12</text>  
+	<text x="440,542,580,542,440,300,160,56,20" y="56,160,300,440,542,580,542,440,300" style="font-size:48px;">123456789</text>  
+	<text x="56" y="160" style="font-size:48px;">10</text>  
+	<text x="160" y="56" style="font-size:48px;">11</text>  
+	<text x="300" y="20" style="font-size:48px;">12</text>  
 </svg>
 SVG;
 ?> 
