@@ -3,7 +3,7 @@
   header("Content-type: image/png");
 	
 	$N=strtotime("now");
-	$dir=strtotime("2020-01-17 01:15:00");
+	$dir=strtotime("2020-02-23 16:00:00");
     $ds=$dir-$N;
     $D=intval($ds/86400);
     $H=intval(($ds%86400)/3600);
@@ -24,7 +24,7 @@
     $blue2 = imagecolorallocate($img, 0, 0, 136);
     $black = imagecolorallocate($img, 0, 0, 0);
     imagefill($img, 0, 0, $white);
-    imagettftext($img, 20, 0, 5, 25, $blue2, $font, "距109學測還剩:");
+    imagettftext($img, 20, 0, 5, 25, $blue2, $font, "距109學測公布:");
     imagettftext($img, 30, 0, 5, 65, $blue, $font, $str);
     //size,,x,y
 	imagepng($img);
