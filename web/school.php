@@ -3,7 +3,7 @@
   header("Content-type: image/png");
 	
 	$N=strtotime("now");
-	$dir=strtotime("2020-02-23 16:00:00");
+	$dir=strtotime("2020-02-24 16:00:00");
     $ds=$dir-$N;
     $D=intval($ds/86400);
     $H=intval(($ds%86400)/3600);
@@ -11,8 +11,8 @@
     $S=$ds%60;
     
     $str=
-    str_pad($D,2,'0',STR_PAD_LEFT)."天".
-    str_pad($H,2,'0',STR_PAD_LEFT)."時".
+    //str_pad($D,2,'0',STR_PAD_LEFT)."天".
+    str_pad($H+$D*24,2,'0',STR_PAD_LEFT)."時".
     str_pad($M,2,'0',STR_PAD_LEFT)."分".
     str_pad($S,2,'0',STR_PAD_LEFT)."秒";
     
@@ -24,7 +24,7 @@
     $blue2 = imagecolorallocate($img, 0, 0, 136);
     $black = imagecolorallocate($img, 0, 0, 0);
     imagefill($img, 0, 0, $white);
-    imagettftext($img, 20, 0, 5, 25, $blue2, $font, "距109學測公布:");
+    imagettftext($img, 20, 0, 5, 25, $blue2, $font, "距離寒假結束還剩:");
     imagettftext($img, 30, 0, 5, 65, $blue, $font, $str);
     //size,,x,y
 	imagepng($img);
