@@ -2,9 +2,11 @@
 header( 'Content-type: image/svg+xml' );
 
 
-$N=strtotime("now");
-$dir=strtotime("2020-02-06 16:00:00");
-$ds=$dir-$N;
+$ds = strtotime("now")-strtotime("2020-02-06 16:00:00");
+$H=($ds%43200)/3600;
+$M=($ds%3600)/60;
+$S=$ds%60;
+
 $R = 290;
 $SL = 250;
 $ML = 200;
@@ -13,6 +15,13 @@ $bgdX = 600;
 $bgdY = 600;
 $PX = 300;
 $PY = 300;
+
+$HX=sin(deg2rad($H*30))*$R+$PX;
+$MX=sin(deg2rad($M*6))*$R+$PX;
+$SX=sin(deg2rad($S*6))*$R+$PX;
+$HY=cos(deg2rad($H*30))*$R+$PY;
+$MY=cos(deg2rad($M*6))*$R+$PY;
+$SY=cos(deg2rad($S*6))*$R+$PY;
 
 
 echo <<<SVG
@@ -24,13 +33,13 @@ echo <<<SVG
 	 
 	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="none" stroke="#000000" stroke-width="10"/>
 	
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="100" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round">
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="100" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="100" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"> 
+	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
