@@ -43,8 +43,8 @@ echo <<<SVG
 	
 	<defs>
 		<radialGradient id="a1" cx="20%" cy="20%">
-	    	<stop offset="5%" stop-color="#FFFFFF" />
-	    	<stop offset="95%" stop-color="#888888" />
+	    	<stop offset="5%" stop-color="#fff" />
+	    	<stop offset="95%" stop-color="#888" />
 		</radialGradient>
 	</defs>
 	
