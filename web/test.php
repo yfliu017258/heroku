@@ -2,11 +2,11 @@
 header( 'Content-type: image/svg+xml' );
 
 
-$R = 290
-$backgroundX = 600
-$backgroundY = 600
-$panelX = 300
-$panelY = 300
+$R = 290;
+$backgroundX = 600;
+$backgroundY = 600;
+$panelX = 300;
+$panelY = 300;
 
 
 echo <<<SVG
@@ -18,8 +18,9 @@ echo <<<SVG
 	<svg width="{$backgroundX}" height="{$backgroundY}" version="1.1"
 	 xmlns="http://www.w3.org/2000/svg"> 
 	 
-	<circle fill="none" cx="{$panelX}" cy="{$panelY}" r="{$R}" stroke="#000000" stroke-width="10"/>
-	 
+	<circle cx="{$panelX}" cy="{$panelY}" r="{$R}" fill="none" stroke="#000000" stroke-width="10"/>
+	<circle cx="{$panelX}" cy="{$panelY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
+	
 </svg>
 SVG;
 ?> 
