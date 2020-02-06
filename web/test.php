@@ -45,8 +45,6 @@ echo <<<SVG
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <svg width="{$viewportX}" height="{$viewportY}" version="1.1"
- viewBox="0,0,{$bdgboxX},{$bdgboxY}"
- preserveAspectRatio="xMidYMid meet"
  xmlns="http://www.w3.org/2000/svg">
 
 <!-- line diagram -->
