@@ -24,11 +24,11 @@ echo <<<SVG
 	
 	/*<line id="second"  points="{$PX},{$PY} {$PX},{$PY+$SL}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
-	</line>*/
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="100" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
-	//	<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	/*<line id="hour"  points="{$PX},{$PY} {$PX},{$PY+$HL}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="100" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
+		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+	</line>
+	<line id="hour"  points="{$PX},{$PY} {$PX},{$PY+$HL}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round">
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$panelY}"/>
 	</line>*/
 	/*
