@@ -46,7 +46,7 @@ echo <<<SVG
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
 	
-	<text x="430,525,540,525,430,300,170,75,40" y="75,170,300,430,525,540,525,430,300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">123456789</text>  
+	<text x="430,525,560,525,430,300,170,75,40" y="75,170,300,430,525,560,525,430,300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">123456789</text>  
 	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">10</text>  
 	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">11</text>  
 	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">12</text>  
