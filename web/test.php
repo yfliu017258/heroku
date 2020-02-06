@@ -1,12 +1,12 @@
 <?php
 header( 'Content-type: image/svg+xml' );
-// circlegeom_svg.php?radius=1000&angle=5
- $R = 75;
+
+ $R = 290;
  $A = 40;
 $msg = 'Circle radius = '.$R.'; Lines inc angle = '.$A;
 // view port (svg width, height)
 $viewportX = 600;
-$viewportY = 350;
+$viewportY = 600;
 // view box same as bounding box (bdgbox)
 $A = deg2rad($A)/2;
 $d = $R/sin($A);
@@ -53,22 +53,24 @@ echo <<<SVG
  stroke-width="{$strokewidth1}"
  stroke-dasharray="{$strokedash1},{$strokedash0}" y1="{$R}"/>
 
-
- <ellipse rx="{$R}" fill="none" ry="{$R}" cx="{$d}" cy="{$R}"
- stroke="#0000FF" stroke-width="{$strokewidth1}"/>
-
+	<circle fill="none" cx="{$d}" cy="{$R}" r="{$R}" stroke="#000000" stroke-width="10">
 
  <line y2="{$tangentpt1Y}" fill="none" x1="0.0" x2="{$tangentpt1X}"
  stroke="#FF0000" y1="{$R}" stroke-width="{$strokewidth1}"/>
+ 
  <line y2="{$tangentpt2Y}" fill="none" x1="0.0" x2="{$tangentpt2X}"
  stroke="#FF0000" y1="{$R}" stroke-width="{$strokewidth1}"/>
+ 
  <line y2="{$tangentpt2Y}" fill="none" x1="{$d}" x2="{$d}"
  stroke="#000000" y1="{$tangentpt1Y}" stroke-width="{$strokewidth1}"
  stroke-dasharray="{$strokedash1},{$strokedash0}"/>
+ 
  <text x="{$text_dX}" y="{$text_dY}" font-family="Verdana"
  font-weight="bold" font-size="{$textht}">d = {$_d} units</text>
+ 
  <text x="0.0" y="{$msg_Y}" font-family="Verdana" font-weight="bold"
  font-size="{$textht1}">{$msg}</text>
+ 
 </svg>
 SVG;
 ?> 
