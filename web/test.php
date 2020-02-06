@@ -19,9 +19,9 @@ $PY = 300;
 $HX=sin(deg2rad($H*30))*$R*0.5+$PX;
 $MX=sin(deg2rad($M*6))*$R*0.7+$PX;
 $SX=sin(deg2rad($S*6))*$R*0.85+$PX;
-$HY=sin(deg2rad($H*30))*$R*0.5+$PY;
-$MY=sin(deg2rad($M*6))*$R*0.7+$PY;
-$SY=sin(deg2rad($S*6))*$R*0.85+$PY;
+$HY=sin(deg2rad($H*30-90))*$R*0.5+$PY;
+$MY=sin(deg2rad($M*6-90))*$R*0.7+$PY;
+$SY=sin(deg2rad($S*6-90))*$R*0.85+$PY;
 
 
 echo <<<SVG
@@ -33,10 +33,10 @@ echo <<<SVG
 	 
 	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="none" stroke="#000000" stroke-width="10"/>
 	
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#666666" stroke="#666666" stroke-width="15" stroke-linecap="round">
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#666666" stroke="#666666" stroke-width="20" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#333333" stroke="#333333" stroke-width="5" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#333333" stroke="#333333" stroke-width="7" stroke-linecap="round">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"> 
@@ -45,7 +45,7 @@ echo <<<SVG
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
 	
-	<text x="440,542,540,542,440,300,160,56,20" y="56,160,300,440,542,580,542,440,300" text-anchor="middle" style="font-size:48px;">123456789</text>  
+	<text x="440,542,580,542,440,300,160,56,20" y="56,160,300,440,542,580,542,440,300" text-anchor="middle" style="font-size:48px;">123456789</text>  
 	<text x="56" y="160" text-anchor="middle" style="font-size:48px;">10</text>  
 	<text x="160" y="56" text-anchor="middle" style="font-size:48px;">11</text>  
 	<text x="300" y="50" text-anchor="middle" style="font-size:48px;">12</text>  
