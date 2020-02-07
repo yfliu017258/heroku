@@ -39,7 +39,7 @@ echo <<<SVG
 		</radialGradient>
 	</defs>
 	
-	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#808080" stroke-width="10"/>
+	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#BBFFEE" stroke-width="10"/>
 	
 	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#132549" stroke="#132549" stroke-width="20" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
@@ -51,7 +51,7 @@ echo <<<SVG
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
-	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#808080" stroke="#808080" stroke-width="5"/>
+	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#BBFFEE" stroke="#BBFFEE" stroke-width="5"/>
 	
 	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">I</text>  
 	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">II</text>  
