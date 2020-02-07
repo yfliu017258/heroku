@@ -17,12 +17,12 @@ $bgdY = 600;
 $PX = 300;
 $PY = 300;
 
-$HX=sin(deg2rad($H*30))*$R*0.5+$PX;
-$MX=sin(deg2rad($M*6))*$R*0.7+$PX;
-$SX=sin(deg2rad($S*6))*$R*0.85+$PX;
-$HY=sin(deg2rad($H*30-90))*$R*0.5+$PY;
-$MY=sin(deg2rad($M*6-90))*$R*0.7+$PY;
-$SY=sin(deg2rad($S*6-90))*$R*0.85+$PY;
+$HX=sin(deg2rad($H*30))*$R*0.4+$PX;
+$MX=sin(deg2rad($M*6))*$R*0.65+$PX;
+$SX=sin(deg2rad($S*6))*$R*0.8+$PX;
+$HY=sin(deg2rad($H*30-90))*$R*0.4+$PY;
+$MY=sin(deg2rad($M*6-90))*$R*0.65+$PY;
+$SY=sin(deg2rad($S*6-90))*$R*0.8+$PY;
 
 
 echo <<<SVG
@@ -39,19 +39,19 @@ echo <<<SVG
 		</radialGradient>
 	</defs>
 	
-	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#132549" stroke-width="10"/>
+	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#808080" stroke-width="10"/>
 	
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#88a2d8" stroke="#88a2d8" stroke-width="20" stroke-linecap="round">
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#132549" stroke="#132549" stroke-width="20" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#88a2d8" stroke="#88a2d8" stroke-width="7" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#132549" stroke="#132549" stroke-width="7" stroke-linecap="round">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#88a2d8" stroke="#88a2d8" stroke-width="2" stroke-linecap="round"> 
+	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#132549" stroke="#132549" stroke-width="2" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
-	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
+	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#808080" stroke="#808080" stroke-width="5"/>
 	
 	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">I</text>  
 	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">II</text>  
