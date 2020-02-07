@@ -34,12 +34,13 @@ echo <<<SVG
 	
 	<defs>
 		<radialGradient id="a1" cx="20%" cy="20%">
-	    	<stop offset="5%" stop-color="#fff" />
-	    	<stop offset="95%" stop-color="#cef" />
+	    	<stop offset="5%" stop-color="#eff" />
+	    	<stop offset="85%" stop-color="#6cc" />
+	    	<stop offset="10%" stop-color="#3bb" />
 		</radialGradient>
 	</defs>
 	
-	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#BBFFEE" stroke-width="10"/>
+	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#132549" stroke-width="10"/>
 	
 	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#884444" stroke="#884444" stroke-width="20" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
@@ -54,9 +55,18 @@ echo <<<SVG
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
 	
 	<text x="430,525,560,525,430,300,170,75,40" y="75,170,300,430,525,560,525,430,300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">123456789</text>  
-	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">10</text>  
-	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">11</text>  
-	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">12</text>  
+	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">I</text>  
+	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">II</text>  
+	<text x="560" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">III</text>  
+	<text x="525" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">IV</text>  
+	<text x="430" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">V</text>  
+	<text x="300" y="560" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">VI</text>  
+	<text x="170" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">VII</text>  
+	<text x="75" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">VIII</text>  
+	<text x="40" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">IX</text>  
+	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">X</text>  
+	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">XI</text>  
+	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">XII</text>  
 </svg>
 SVG;
 ?> 
