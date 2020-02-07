@@ -17,21 +17,12 @@ $bgdY = 600;
 $PX = 300;
 $PY = 300;
 
-$HX=sin(deg2rad($H*30))*$R*0.5+$PX;
-$MX=sin(deg2rad($M*6))*$R*0.7+$PX;
-$SX=sin(deg2rad($S*6))*$R*0.85+$PX;
-$HY=sin(deg2rad($H*30-90))*$R*0.5+$PY;
-$MY=sin(deg2rad($M*6-90))*$R*0.7+$PY;
-$SY=sin(deg2rad($S*6-90))*$R*0.85+$PY;
-
-<defs>
-  <radialGradient id="r1" cx=".3" cy=".3" r=".7">
-    <stop offset="0%" stop-color="#fff"></stop>
-    <stop offset="30%" stop-color="#9f9"></stop>
-    <stop offset="70%" stop-color="#373"></stop>
-    <stop offset="100%" stop-color="#000"></stop>
-  </linearGradient>
-</defs>
+$HX=sin(deg2rad($H*30))*$R*0.4+$PX;
+$MX=sin(deg2rad($M*6))*$R*0.65+$PX;
+$SX=sin(deg2rad($S*6))*$R*0.8+$PX;
+$HY=sin(deg2rad($H*30-90))*$R*0.4+$PY;
+$MY=sin(deg2rad($M*6-90))*$R*0.65+$PY;
+$SY=sin(deg2rad($S*6-90))*$R*0.8+$PY;
 
 
 echo <<<SVG
@@ -43,29 +34,37 @@ echo <<<SVG
 	
 	<defs>
 		<radialGradient id="a1" cx="20%" cy="20%">
-	    	<stop offset="5%" stop-color="#fff" />
-	    	<stop offset="95%" stop-color="#cef" />
+	    	<stop offset="5%" stop-color="#eff" />
+	    	<stop offset="95%" stop-color="#6cc" />
 		</radialGradient>
 	</defs>
 	
 	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#BBFFEE" stroke-width="10"/>
 	
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#666666" stroke="#884444" stroke-width="20" stroke-linecap="round">
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#132549" stroke="#132549" stroke-width="20" stroke-linecap="round">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#333333" stroke="#882222" stroke-width="7" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#132549" stroke="#132549" stroke-width="7" stroke-linecap="round">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#000000" stroke="#888800" stroke-width="2" stroke-linecap="round"> 
+	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#132549" stroke="#132549" stroke-width="2" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
-	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
+	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#BBFFEE" stroke="#BBFFEE" stroke-width="5"/>
 	
-	<text x="430,525,560,525,430,300,170,75,40" y="75,170,300,430,525,560,525,430,300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">123456789</text>  
-	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">10</text>  
-	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">11</text>  
-	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">12</text>  
+	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">I</text>  
+	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">II</text>  
+	<text x="560" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">III</text>  
+	<text x="525" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">IV</text>  
+	<text x="430" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">V</text>  
+	<text x="300" y="560" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">VI</text>  
+	<text x="170" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">VII</text>  
+	<text x="85" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">VIII</text>  
+	<text x="40" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">IX</text>  
+	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">X</text>  
+	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">XI</text>  
+	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">XII</text>  
 </svg>
 SVG;
 ?> 
