@@ -69,13 +69,16 @@ echo <<<SVG
 
 
 	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="{$HL}" stroke="#6ff" stroke-width="15" stroke-linecap="round" stroke-opacity="0.5">
-		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$HD},{$PX},{$PY}" to="{$HD},{$PX},{$PY}"/>
+		<set attributeName="se" to="{$HD},{$PX},{$PY}" begin="0s">
+		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="{$ML}" stroke="#6ff" stroke-width="7.5" stroke-linecap="round" stroke-opacity="0.75">
-		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$MD},{$PX},{$PY}" to="{$MD},{$PX},{$PY}"/>
+		<set attributeName="se" to="{$MD},{$PX},{$PY}" begin="0s">
+		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="{$SL}" stroke="#6ff" stroke-width="2.5" stroke-linecap="round"> 
-		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$SD},{$PX},{$PY}" to="{$SD},{$PX},{$PY}"/>
+		<set attributeName="se" to="{$SD},{$PX},{$PY}" begin="0s">
+		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
