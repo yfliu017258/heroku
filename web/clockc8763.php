@@ -23,6 +23,9 @@ $PY = 300;
 $HD= $H * 30;
 $MD= $M * 6;
 $SD= $S * 6;
+$HDe= $H * 30 + 360;
+$MDe= $M * 6 + 360;
+$SDe= $S * 6 + 360;
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
@@ -69,18 +72,15 @@ echo <<<SVG
 	
 	
 	<image href="https://cies96035.herokuapp.com/img/CL/H.png" height="{$HL}" width="200" x="200" y="160">
-		<animateTransform dur="0s" attributeName="set" begin="0s" type="rotate" to="{$HD},{$PX},{$PY}"/>
-		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$HD},{$PX},{$PY}" to="{$HDe},{$PX},{$PY}"/>
 	</image>
 	
 	<image href="https://cies96035.herokuapp.com/img/CL/M.png" height="{$ML}" width="200" x="200" y="120">
-		<animateTransform dur="0s" attributeName="set" begin="0s" type="rotate" to="{$MD},{$PX},{$PY}"/>
-		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$MD},{$PX},{$PY}" to="{$MDe},{$PX},{$PY}"/>
 	</image>
 	
 	<image href="https://cies96035.herokuapp.com/img/CL/S.png" height="{$SL}" width="200" x="200" y="60">
-		<animateTransform dur="0s" attributeName="set" begin="0s" type="rotate" to="{$SD},{$PX},{$PY}"/>
-		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$SD},{$PX},{$PY}" to="{$SDe},{$PX},{$PY}"/>
 	</image>
 
 	<image href="https://cies96035.herokuapp.com/img/CL/p.png" height="30" width="30" x="285" y="285"/>
