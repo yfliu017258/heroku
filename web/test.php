@@ -9,9 +9,9 @@ $M=($ds%3600)/60;
 $S=$ds%60;
 
 $R = 290;
-$SL = 250;
-$ML = 200;
-$HL = 150;
+$HL = $R * 0.35;
+$ML = $R * 0.6;
+$SL = $R * 0.8;
 $bgdX = 600;
 $bgdY = 600;
 $PX = 300;
@@ -65,7 +65,9 @@ echo <<<SVG
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>*/
 	
-	<image href="https://cies96035.herokuapp.com/img/CL/a.png" height="200" width="200"/>
+	<image href="https://cies96035.herokuapp.com/img/CL/H.png" height="{$HL}" width="300" x="{$PX}" y="{$PY}/>
+	<image href="https://cies96035.herokuapp.com/img/CL/M.png" height="{$ML}" width="300" x="{$PX}" y="{$PY}/>
+	<image href="https://cies96035.herokuapp.com/img/CL/S.png" height="{$SL}" width="300" x="{$PX}" y="{$PY}/>
 
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
