@@ -9,7 +9,7 @@ $M=($ds%3600)/60;
 $S=$ds%60;
 
 $R = 290;
-$HL = 105;
+$HL = 140;
 $ML = 180;
 $SL = 240;
 $bgdX = 600;
@@ -17,6 +17,9 @@ $bgdY = 600;
 $PX = 300;
 $PY = 300;
 
+$HD=$H*30;
+$MD=$M*6;
+$SD=$S*6;
 $HX=sin(deg2rad($H*30))*$R*0.35+$PX;
 $MX=sin(deg2rad($M*6))*$R*0.6+$PX;
 $SX=sin(deg2rad($S*6))*$R*0.8+$PX;
@@ -55,9 +58,17 @@ echo <<<SVG
 	
 	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="url(#a3)" stroke-width="10"/>
 	
-	<image href="https://cies96035.herokuapp.com/img/CL/H.png" height="{$HL}" width="200" x="200" y="195"/>
-	<image href="https://cies96035.herokuapp.com/img/CL/M.png" height="{$ML}" width="200" x="200" y="120"/>
-	<image href="https://cies96035.herokuapp.com/img/CL/S.png" height="{$SL}" width="200" x="200" y="60"/>
+	<image href="https://cies96035.herokuapp.com/img/CL/H.png" height="{$HL}" width="200" x="200" y="160">
+		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$HD},{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+	</image>
+	
+	<image href="https://cies96035.herokuapp.com/img/CL/M.png" height="{$ML}" width="200" x="200" y="120">
+		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$MD},{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+	</image>
+	
+	<image href="https://cies96035.herokuapp.com/img/CL/S.png" height="{$SL}" width="200" x="200" y="60">
+		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$SD},{$PX},{$PY}" to="360,{$PX},{$PY}"/>
+	</image>
 
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
