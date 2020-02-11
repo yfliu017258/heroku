@@ -23,9 +23,13 @@ $SL = $PY - $R * 0.8;
 $HD= $H * 30;
 $MD= $M * 6;
 $SD= $S * 6;
-$HDe= $H * 30 + 360;
-$MDe= $M * 6 + 360;
-$SDe= $S * 6 + 360;
+
+$HX= $PX + sin(deg2rad($HD)) * R * 0.35 ;
+$HY= $PY + sin(deg2rad($HD + 90)) * R * 0.35 ;
+$MX= $PX + sin(deg2rad($MD)) * R * 0.6 ;
+$MY= $PY + sin(deg2rad($MD + 90)) * R * 0.6 ;
+$SX= $PX + sin(deg2rad($SD)) * R * 0.8 ;
+$SY= $PY + sin(deg2rad($SD + 90)) * R * 0.8 ;
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
@@ -71,14 +75,14 @@ echo <<<SVG
 	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">XII</text>  
 
 
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="{$HL}" stroke="#6ff" stroke-width="15" stroke-linecap="round" stroke-opacity="0.5">
-		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$HD},{$PX},{$PY}" to="{$HDe},{$PX},{$PY}"/>
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" stroke="#6ff" stroke-width="15" stroke-linecap="round" stroke-opacity="0.5">
+		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="{$ML}" stroke="#6ff" stroke-width="7.5" stroke-linecap="round" stroke-opacity="0.75">
-		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$MD},{$PX},{$PY}" to="{$MDe},{$PX},{$PY}"/>
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" stroke="#6ff" stroke-width="7.5" stroke-linecap="round" stroke-opacity="0.75">
+		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$PX}" y2="{$SL}" stroke="#6ff" stroke-width="2.5" stroke-linecap="round"> 
-		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$SD},{$PX},{$PY}" to="{$SDe},{$PX},{$PY}"/>
+	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" stroke="#6ff" stroke-width="2.5" stroke-linecap="round"> 
+		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
