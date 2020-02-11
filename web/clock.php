@@ -67,18 +67,18 @@ echo <<<SVG
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
 	
-	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">I</text>  
-	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">II</text>  
-	<text x="560" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">III</text>  
-	<text x="525" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">IV</text>  
-	<text x="430" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">V</text>  
-	<text x="300" y="560" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">VI</text>  
-	<text x="170" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">VII</text>  
-	<text x="85" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">VIII</text>  
-	<text x="40" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">IX</text>  
-	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">X</text>  
-	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">XI</text>  
-	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">XII</text>  
+	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">I</text>  
+	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">II</text>  
+	<text x="560" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">III</text>  
+	<text x="525" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">IV</text>  
+	<text x="430" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">V</text>  
+	<text x="300" y="560" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">VI</text>  
+	<text x="170" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">VII</text>  
+	<text x="85" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">VIII</text>  
+	<text x="40" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">IX</text>  
+	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">X</text>  
+	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">XI</text>  
+	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">XII</text>  
 </svg>
 SVG;
 ?> 

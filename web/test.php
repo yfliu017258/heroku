@@ -65,7 +65,7 @@ echo <<<SVG
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>*/
 	
-	<image xlink:href="img/CL/a.png" height="200" width="200"/>
+	<image href="https://cies96035.herokuapp.com/img/CL/a.png" height="200" width="200"/>
 
 	
 	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
