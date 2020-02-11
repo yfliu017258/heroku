@@ -58,7 +58,7 @@ echo <<<SVG
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
 	
-	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#BBFFEE" stroke="#BBFFEE" stroke-width="5"/>
+	<circle id="point" cx="{$PX}" cy="{$PY}" r="15" fill="url(#a2)" stroke="#BBFFEE" stroke-width="0"/>
 	
 	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">I</text>  
 	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">II</text>  
