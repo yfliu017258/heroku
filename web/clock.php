@@ -24,12 +24,12 @@ $HD= $H * 30;
 $MD= $M * 6;
 $SD= $S * 6;
 
-$HX= $PX + sin(deg2rad($HD)) * $R * 0.35 ;
-$HY= $PY + sin(deg2rad($HD + 90)) * $R * 0.35 ;
-$MX= $PX + sin(deg2rad($MD)) * $R * 0.6 ;
-$MY= $PY + sin(deg2rad($MD + 90)) * $R * 0.6 ;
-$SX= $PX + sin(deg2rad($SD)) * $R * 0.8 ;
-$SY= $PY + sin(deg2rad($SD + 90)) * $R * 0.8 ;
+$HX= $PY + sin(deg2rad($HD + 90)) * $R * 0.35 ;
+$HY= $PX + sin(deg2rad($HD)) * $R * 0.35 ;
+$MX= $PY + sin(deg2rad($MD + 90)) * $R * 0.6 ;
+$MY= $PX + sin(deg2rad($MD)) * $R * 0.6 ;
+$SX= $PY + sin(deg2rad($SD + 90)) * $R * 0.8 ;
+$SY= $PX + sin(deg2rad($SD)) * $R * 0.8 ;
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
