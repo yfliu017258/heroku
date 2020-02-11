@@ -71,19 +71,19 @@ echo <<<SVG
 	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:50px;" fill="url(#a2)">XII</text>  
 	
 	
-	<image src="../img/CL/H.png" height="{$HL}" width="200" x="200" y="160">
+	<image herf="../img/CL/H.png" height="{$HL}" width="200" x="200" y="160">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$HD},{$PX},{$PY}" to="{$HDe},{$PX},{$PY}"/>
 	</image>
 	
-	<image src="../img/CL/M.png" height="{$ML}" width="200" x="200" y="120">
+	<image herf="../img/CL/M.png" height="{$ML}" width="200" x="200" y="120">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$MD},{$PX},{$PY}" to="{$MDe},{$PX},{$PY}"/>
 	</image>
 	
-	<image src="../img/CL/S.png" height="{$SL}" width="200" x="200" y="60">
+	<image herf="../img/CL/S.png" height="{$SL}" width="200" x="200" y="60">
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="{$SD},{$PX},{$PY}" to="{$SDe},{$PX},{$PY}"/>
 	</image>
 
-	<image src="../img/CL/p.png" height="30" width="30" x="285" y="285"/>
+	<image herf="../img/CL/p.png" height="60" width="60" x="270" y="270"/>
 </svg>
 SVG;
 ?> 
