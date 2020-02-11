@@ -69,17 +69,17 @@ echo <<<SVG
 	
 	
 	<image href="https://cies96035.herokuapp.com/img/CL/H.png" height="{$HL}" width="200" x="200" y="160">
-		<set attributeName="se" to="{$HD},{$PX},{$PY}" begin="0s">
+		<animateTransform dur="0s" attributeName="set" begin="0s" type="rotate" to="{$HD},{$PX},{$PY}"/>
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</image>
 	
 	<image href="https://cies96035.herokuapp.com/img/CL/M.png" height="{$ML}" width="200" x="200" y="120">
-		<set attributeName="se" to="{$MD},{$PX},{$PY}" begin="0s">
+		<animateTransform dur="0s" attributeName="set" begin="0s" type="rotate" to="{$MD},{$PX},{$PY}"/>
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</image>
 	
 	<image href="https://cies96035.herokuapp.com/img/CL/S.png" height="{$SL}" width="200" x="200" y="60">
-		<set attributeName="se" to="{$SD},{$PX},{$PY}" begin="0s">
+		<animateTransform dur="0s" attributeName="set" begin="0s" type="rotate" to="{$SD},{$PX},{$PY}"/>
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</image>
 
