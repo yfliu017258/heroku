@@ -9,24 +9,20 @@ $M=($ds%3600)/60;
 $S=$ds%60;
 
 $R = 290;
+
 $HL = 140;
 $ML = 180;
 $SL = 240;
+
 $bgdX = 600;
 $bgdY = 600;
+
 $PX = 300;
 $PY = 300;
 
-$HD=$H*30;
-$MD=$M*6;
-$SD=$S*6;
-$HX=sin(deg2rad($H*30))*$R*0.35+$PX;
-$MX=sin(deg2rad($M*6))*$R*0.6+$PX;
-$SX=sin(deg2rad($S*6))*$R*0.8+$PX;
-$HY=sin(deg2rad($H*30-90))*$R*0.35+$PY;
-$MY=sin(deg2rad($M*6-90))*$R*0.6+$PY;
-$SY=sin(deg2rad($S*6-90))*$R*0.8+$PY;
-
+$HD= $H * 30;
+$MD= $M * 6;
+$SD= $S * 6;
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
