@@ -17,12 +17,13 @@ $bgdY = 600;
 $PX = 300;
 $PY = 300;
 
-$HX=sin(deg2rad($H*30))*$R*0.5+$PX;
-$MX=sin(deg2rad($M*6))*$R*0.7+$PX;
-$SX=sin(deg2rad($S*6))*$R*0.85+$PX;
-$HY=sin(deg2rad($H*30-90))*$R*0.5+$PY;
-$MY=sin(deg2rad($M*6-90))*$R*0.7+$PY;
-$SY=sin(deg2rad($S*6-90))*$R*0.85+$PY;
+$HX=sin(deg2rad($H*30))*$R*0.35+$PX;
+$MX=sin(deg2rad($M*6))*$R*0.6+$PX;
+$SX=sin(deg2rad($S*6))*$R*0.8+$PX;
+$HY=sin(deg2rad($H*30-90))*$R*0.35+$PY;
+$MY=sin(deg2rad($M*6-90))*$R*0.6+$PY;
+$SY=sin(deg2rad($S*6-90))*$R*0.8+$PY;
+
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
@@ -33,29 +34,54 @@ echo <<<SVG
 	
 	<defs>
 		<radialGradient id="a1" cx="20%" cy="20%">
-	    	<stop offset="5%" stop-color="#fff" />
-	    	<stop offset="95%" stop-color="#888" />
+	    	<stop offset="5%" stop-color="#153570" />
+	    	<stop offset="95%" stop-color="#050520" />
 		</radialGradient>
 	</defs>
 	
-	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="#BBFFEE" stroke-width="10"/>
+	<defs>
+		<radialGradient id="a2" cx="20%" cy="20%">
+	    	<stop offset="5%" stop-color="#fff" />
+	    	<stop offset="95%" stop-color="#bfe" />
+		</radialGradient>
+	</defs>
 	
-	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" fill="#666666" stroke="#666666" stroke-width="20" stroke-linecap="round">
+	<defs>
+		<radialGradient id="a3" cx="20%" cy="20%">
+	    	<stop offset="5%" stop-color="#cff" />
+	    	<stop offset="95%" stop-color="#6ff" />
+		</radialGradient>
+	</defs>
+	
+	<circle id="panel" cx="{$PX}" cy="{$PY}" r="{$R}" fill="url(#a1)" stroke="url(#a3)" stroke-width="10"/>
+	/*
+	<line id="hour"  x1="{$PX}" y1="{$PY}" x2="{$HX}" y2="{$HY}" stroke="#6ff" stroke-width="15" stroke-linecap="round" stroke-opacity="0.5">
 		<animateTransform dur="43200s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" fill="#333333" stroke="#333333" stroke-width="7" stroke-linecap="round">
+	<line id="minute"  x1="{$PX}" y1="{$PY}" x2="{$MX}" y2="{$MY}" stroke="#6ff" stroke-width="7.5" stroke-linecap="round" stroke-opacity="0.75">
 		<animateTransform dur="3600s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
 	</line>
-	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="round"> 
+	<line id="second"  x1="{$PX}" y1="{$PY}" x2="{$SX}" y2="{$SY}" stroke="#6ff" stroke-width="2.5" stroke-linecap="round"> 
 		<animateTransform dur="60s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,{$PX},{$PY}" to="360,{$PX},{$PY}"/>
-	</line>
+	</line>*/
 	
-	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#000000" stroke="#000000" stroke-width="10"/>
+	<image xlink:href="img/CL/a.png" height="200" width="200"/>
+
 	
-	<text x="430,525,560,525,430,300,170,75,40" y="75,170,300,430,525,560,525,430,300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">123456789</text>  
-	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">10</text>  
-	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">11</text>  
-	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;">12</text>  
+	<circle id="point" cx="{$PX}" cy="{$PY}" r="10" fill="#050520" stroke="url(#a3)" stroke-width="5"/>
+	
+	<text x="430" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">I</text>  
+	<text x="525" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">II</text>  
+	<text x="560" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">III</text>  
+	<text x="525" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">IV</text>  
+	<text x="430" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">V</text>  
+	<text x="300" y="560" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">VI</text>  
+	<text x="170" y="525" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">VII</text>  
+	<text x="85" y="430" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">VIII</text>  
+	<text x="40" y="300" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">IX</text>  
+	<text x="75" y="170" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">X</text>  
+	<text x="170" y="75" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">XI</text>  
+	<text x="300" y="40" text-anchor="middle" alignment-baseline="central" style="font-size:55px;" fill="url(#a2)">XII</text>  
 </svg>
 SVG;
 ?> 
