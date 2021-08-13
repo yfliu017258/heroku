@@ -19,12 +19,12 @@ $bgdY = 600;
 $PX = 300;
 $PY = 300;
 
-$HD= $H * 30;
-$MD= $M * 6;
-$SD= $S * 6;
-$HDe= $H * 30 + 360;
-$MDe= $M * 6 + 360;
-$SDe= $S * 6 + 360;
+$HD = $H * 30;
+$MD = $M * 6;
+$SD = $S * 6;
+$HDe = $H * 30 + 360;
+$MDe = $M * 6 + 360;
+$SDe = $S * 6 + 360;
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
