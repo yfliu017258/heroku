@@ -1,8 +1,7 @@
 <?php
 header( 'Content-type: image/svg+xml' );
-
-
 header("Cache-Control: max-age=2");
+
 $ds = strtotime("now")-strtotime("2020-02-06 16:00:00");
 $H=($ds%43200)/3600;
 $M=($ds%3600)/60;
@@ -29,10 +28,8 @@ $SY= $PY + sin(deg2rad($SD - 90)) * $R * 0.8 ;
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-	"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
-<svg width="{$bgdX}" height="{$bgdY}" version="1.1"
-	 xmlns="http://www.w3.org/2000/svg"> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<svg width="{$bgdX}" height="{$bgdY}" version="1.1" xmlns="http://www.w3.org/2000/svg"> 
 	
 	<defs>
 		<radialGradient id="a1" cx="20%" cy="20%">
