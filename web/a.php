@@ -1,10 +1,15 @@
 <?php
-header( 'Content-type: image/svg+xml' );
 
 $ds = strtotime("now")-strtotime("2020-02-06 16:00:00");
 $H = ($ds % 43200) / 3600;
 $M = ($ds % 3600) / 60;
 $S = $ds % 60;
+
+if($H == 7 && $M == 27){
+	header("Location: ./img/gif/sao.gif");
+}
+
+header( 'Content-type: image/svg+xml' );
 
 $R = 290;
 
