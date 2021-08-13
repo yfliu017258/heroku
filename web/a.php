@@ -5,7 +5,7 @@ $H = ($ds % 43200) / 3600;
 $M = ($ds % 3600) / 60;
 $S = $ds % 60;
 
-if($H == 7){
+if(616 / 60 <= $H && $H < 617 / 60){
 	header("Location: https://cies96035.herokuapp.com/img/gif/sao.gif");
 }
 
