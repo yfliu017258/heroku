@@ -1,10 +1,12 @@
 <?php
-header( 'Content-type: image/svg+xml' );
-
 $ds = strtotime("now")-strtotime("2020-02-06 16:00:00");
 $H = ($ds % 43200) / 3600;
 $M = ($ds % 3600) / 60;
 $S = $ds % 60;
+
+if(616 / 60 <= $H && $H < 617 / 60){
+	header("Location: https://cies96035.herokuapp.com/img/gif/sao.gif");
+}
 
 $R = 290;
 
@@ -24,6 +26,8 @@ $SD = $S * 6;
 $HDe = $HD + 360;
 $MDe = $MD + 360;
 $SDe = $SD + 360;
+
+header( 'Content-type: image/svg+xml' );
 
 echo <<<SVG
 <?xml version="1.0" standalone="no"?>	
