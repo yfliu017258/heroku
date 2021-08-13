@@ -5,7 +5,7 @@ $H = ($ds % 43200) / 3600;
 $M = ($ds % 3600) / 60;
 $S = $ds % 60;
 
-if($H == 7 && $M == 27){
+if($H == 7){
 	header("Location: ./img/gif/sao.gif");
 }
 
