@@ -6,7 +6,7 @@ $M = ($ds % 3600) / 60;
 $S = $ds % 60;
 
 if($H == 7){
-	header("Location: ./img/gif/sao.gif");
+	header("Location: https://cies96035.herokuapp.com/img/gif/sao.gif");
 }
 
 header( 'Content-type: image/svg+xml' );
